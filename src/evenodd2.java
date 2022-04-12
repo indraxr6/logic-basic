@@ -15,6 +15,7 @@ public class evenodd2 {
                               System.out.println("Enter element "+(a+1));
                               val[a]=input.nextInt();
                     }
+                   
 
                     String arr = Arrays.toString(val);
                     System.out.println("\nArray is: "+arr);

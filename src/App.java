@@ -1,21 +1,33 @@
+import java.util.Scanner;
 
-import java.util.Arrays;
-import java.util.Collections;
- 
 public class App {
-    public static void main(String[] args)
-    {
-        Integer[] num = { 2, 4, 7, 5, 9 };
+    public static void main(String[] args) {
+        int num1, num2, num3, greatest;
+        Scanner input = new Scanner(System.in);
 
-        int min = Collections.min(Arrays.asList(num));
-        int max = Collections.max(Arrays.asList(num));
- 
-        // printing minimum and maximum numbers
-        System.out.println("Minimum number of array is : "
-                           + min);
-        System.out.println("Maximum number of array is : "
-                           + max);
+        System.out.println("Minimal and maximal values of three numbers: ");
+        System.out.print("Enter first number: ");
+        num1 = input.nextInt();
+
+        System.out.print("Enter second number: ");
+        num2 = input.nextInt();
+
+        System.out.print("Enter third number: ");
+        num3 = input.nextInt();
+
+        if(num1 > num2 && num1 > num3) {
+            greatest = num1;
+        } else if(num2 > num1 && num2 > num3) {
+            greatest = num2;
+        } else {
+            greatest = num3;
+            input.close();
+        }
+        
+        System.out.println("The greatest number is: " + greatest);
     }
+    
+   
 }
 
 
